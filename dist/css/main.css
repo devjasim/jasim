@@ -90,6 +90,10 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr) !important; } }
+
 @media screen and (max-width: 768px) {
   main {
     text-align: center;
@@ -113,11 +117,18 @@
     .menu-branding .portrait {
       background: url("../img/portrait_small.jpg");
       width: 140px;
-      height: 140px; } }
+      height: 140px; }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3' !important;
+    grid-template-columns: 1fr !important; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr) !important; } }
 
 @media screen and (max-width: 500px) {
   mani#home h1 {
-    margin-top: 10vh; } }
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr !important; } }
 
 html {
   font-size: 10px; }
@@ -176,7 +187,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh - 35px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -188,3 +199,90 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr); }
+  .about-info .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: #eece1a 3px solid; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .about-info .job-1 {
+    grid-area: job1; }
+  .about-info .job-2 {
+    grid-area: job2; }
+  .about-info .job-3 {
+    grid-area: job3; }
+  .about-info .job {
+    background: #515151;
+    padding: .5rem;
+    border-bottom: 5px solid #eece1a; }
+    .about-info .job h3 {
+      font-size: 16px; }
+    .about-info .job h6 {
+      font-size: 13px;
+      margin: 10px 0; }
+    .about-info .job p {
+      font-size: 12px; }
+
+.projects {
+  display: grid;
+  grid-gap: .7rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    border: 3px solid #fff; }
+    .projects img:hover {
+      opacity: .5;
+      border-color: #eece1a;
+      transition: .5s all ease-in-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px solid #fff;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: .5s all ease-in-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #eece1a;
+      color: #fff; }
+      .boxes div:hover span {
+        color: #000; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  font-size: 14px; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #eece1a;
+    color: #000; }
+  .btn i, .btn-dark i, .btn-light i {
+    margin-right: 5px; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #c4c4c4;
+  color: #333; }
+
+#main-footer {
+  text-align: Center;
+  padding: 1rem;
+  background: #2b2b2b;
+  color: #fff; }
