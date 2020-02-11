@@ -96,7 +96,24 @@ main{
     
     .bio{
         grid-area:bio;
-        font-size:1.5rem;
+        font-size:2rem;
+        h3{
+            position:relative;
+            padding-bottom:.5rem;
+            &:after{
+                content:'';
+                position:absolute;
+                width:8rem;
+                height:.4rem;
+                background:$secondary-color;
+                left:0;
+                bottom:0;
+            }
+        }
+
+        p{
+            font-size:14px;
+        }
     }
     
     .job-1{
@@ -111,17 +128,19 @@ main{
     
     .job{
         background:lighten($primary-color, 5);
-        padding:.5rem;
+        padding:1rem 1.5rem;
         border-bottom:5px solid $secondary-color;
         h3{
-            font-size:16px;
+            font-size:18px;
         }
         h6{
-            font-size:13px;
-            margin:10px 0;
+            font-size:16px;
+            margin:5px 0;
+            color:$secondary-color;
         }
         p{
-            font-size:12px;
+            font-size:14px;
+            margin-top:5px;
         }
     }
 }
@@ -205,10 +224,11 @@ main{
     color:#333;
 }
 
-// Fooer
+// Footer
 #main-footer{
     text-align:Center;
-    padding:1rem;
+    padding:1.5rem;
     background:darken($primary-color, 10);
-    color: set-text-color($primary-color);
+    color:$secondary-color;
+    font-size:13px;
 }
