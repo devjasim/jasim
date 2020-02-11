@@ -141,7 +141,7 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneve, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Oxygen', sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/background.jpg);
@@ -191,10 +191,12 @@ main {
   main .icons {
     margin-top: 1rem; }
     main .icons a {
-      padding: 0.5rem; }
+      padding: 0.5rem;
+      transition: .5s all ease-in-out; }
       main .icons a:hover {
-        color: #eece1a;
-        transition: .5s all ease-in-out; }
+        color: #eece1a; }
+      main .icons a i {
+        font-size: 25px; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -237,11 +239,15 @@ main {
   grid-template-columns: repeat(3, 1fr); }
   .projects img {
     width: 100%;
-    border: 3px solid #fff; }
+    border: 3px solid #fff;
+    transition: .5s all ease-in-out; }
     .projects img:hover {
       opacity: .5;
-      border-color: #eece1a;
-      transition: .5s all ease-in-out; }
+      border-color: #eece1a; }
+  .projects .item .btn-dark {
+    transition: .5s all ease-in-out; }
+  .projects .item .btn-light {
+    transition: .5s all ease-in-out; }
 
 .boxes {
   display: flex;
