@@ -141,7 +141,7 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneve, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Oxygen', sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/background.jpg);
@@ -191,10 +191,12 @@ main {
   main .icons {
     margin-top: 1rem; }
     main .icons a {
-      padding: 0.5rem; }
+      padding: 0.5rem;
+      transition: .5s all ease-in-out; }
       main .icons a:hover {
-        color: #eece1a;
-        transition: .5s all ease-in-out; }
+        color: #eece1a; }
+      main .icons a i {
+        font-size: 25px; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -212,7 +214,20 @@ main {
     border: #eece1a 3px solid; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.5rem; }
+    font-size: 2rem; }
+    .about-info .bio h3 {
+      position: relative;
+      padding-bottom: .5rem; }
+      .about-info .bio h3:after {
+        content: '';
+        position: absolute;
+        width: 8rem;
+        height: .4rem;
+        background: #eece1a;
+        left: 0;
+        bottom: 0; }
+    .about-info .bio p {
+      font-size: 14px; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
@@ -221,15 +236,17 @@ main {
     grid-area: job3; }
   .about-info .job {
     background: #515151;
-    padding: .5rem;
+    padding: 1rem 1.5rem;
     border-bottom: 5px solid #eece1a; }
     .about-info .job h3 {
-      font-size: 16px; }
+      font-size: 18px; }
     .about-info .job h6 {
-      font-size: 13px;
-      margin: 10px 0; }
+      font-size: 16px;
+      margin: 5px 0;
+      color: #eece1a; }
     .about-info .job p {
-      font-size: 12px; }
+      font-size: 14px;
+      margin-top: 5px; }
 
 .projects {
   display: grid;
@@ -237,11 +254,15 @@ main {
   grid-template-columns: repeat(3, 1fr); }
   .projects img {
     width: 100%;
-    border: 3px solid #fff; }
+    border: 3px solid #fff;
+    transition: .5s all ease-in-out; }
     .projects img:hover {
       opacity: .5;
-      border-color: #eece1a;
-      transition: .5s all ease-in-out; }
+      border-color: #eece1a; }
+  .projects .item .btn-dark {
+    transition: .5s all ease-in-out; }
+  .projects .item .btn-light {
+    transition: .5s all ease-in-out; }
 
 .boxes {
   display: flex;
@@ -283,6 +304,7 @@ main {
 
 #main-footer {
   text-align: Center;
-  padding: 1rem;
+  padding: 1.5rem;
   background: #2b2b2b;
-  color: #fff; }
+  color: #eece1a;
+  font-size: 13px; }
