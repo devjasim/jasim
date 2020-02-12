@@ -9,9 +9,17 @@
   },
   "author": "Jasim Uddin",
   "license": "ISC",
-  "homepage": "http://jasim-ur.github.io/modern_portfolio",
+  "homepage": "https://jasim-ur.github.io/modern_portfolio",
   "dependencies": {
     "gh-pages": "^2.2.0",
     "node-sass": "^4.13.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasim-ur/modern_portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jasim-ur/modern_portfolio/issues"
   }
 }
